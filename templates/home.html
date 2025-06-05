@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="jumbotron bg-light p-5 rounded">
+                <!-- <h1 class="display-4">Welcome to CustomerOrder, {{ user.username }}!</h1> -->
+                <p class="lead">Manage your customers, categories, products, and orders with ease.</p>
+                <hr class="my-4">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="{% url 'customers' %}" class="btn btn-primary btn-lg">View Customers</a>
+                    <a href="{% url 'orders' %}" class="btn btn-primary btn-lg">View Orders</a>
+                    <a href="{% url 'products' %}" class="btn btn-primary btn-lg">View Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
