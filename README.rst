@@ -70,7 +70,35 @@ whitenoise==6.7.0
 
 **
 """
-
-To install all dependencies:
+**Customer Order SetUp**
+clone the repository and navigate to the project directory:
 ```bash
-pip install -r requirements.txt
+git clone 
+cd customer-order
+```                    
+Make sure you have Python 3.11 installed, then
+ 
+create a virtual environment and activate it:
+```bashpython -m venv venv
+source venv/bin/activate 
+ # On Windows: v    env\Scripts\activate
+ # On macOS/Linux: source venv/bin/activate
+```     
+
+To install pip and then all dependencies:
+```bash
+pip install --upgrade pip 
+pip install -r requirements/base.txt
+
+Create a .env file in the project root with the following content, replacing placeholders with your actual credentials:
+```env
+ask from the repository owner
+
+Then outsource the .env file to set environment variables:
+```bash
+. env.sh
+Then make the migrations and run the development server:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
