@@ -27,3 +27,4 @@ htmlcov/
 .admin.txt
 .back.html
 .debug.log
+venv
