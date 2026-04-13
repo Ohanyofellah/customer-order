@@ -52,7 +52,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: yourusername/customer-order-api:latest
+          tags: felix.ohanyo/customer-order-api:latest
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f k8s/deployment.yaml
